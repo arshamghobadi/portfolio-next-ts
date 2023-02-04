@@ -30,16 +30,16 @@ export default function Hero({}: Props) {
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         <div className="pt-5">
-          <Link href="/about">
+          <Link href="#About">
             <button className="heroButton">about</button>
           </Link>
-          <Link href="/Experience">
+          <Link href="#experience">
             <button className="heroButton">Experience</button>
           </Link>
-          <Link href="/Skills">
+          <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="/Projects">
+          <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
         </div>

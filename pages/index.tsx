@@ -4,11 +4,12 @@ import { Inter } from '@next/font/google';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-
+import Image from 'next/image';
 import WorkExperience from '@/components/WorkExperience';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import ContactME from '@/components/ContactME';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,6 +41,19 @@ export default function Home() {
       <section id="contact" className="snap-start">
         <ContactME />
       </section>
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <Image
+              className=" rounded-full filter grayscale hover:grayscale-0"
+              alt="arsham"
+              src="/WhatsApp Image 2022-09-09 at 10.24.57.jpeg"
+              width={32}
+              height={32}
+            />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 }

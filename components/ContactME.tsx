@@ -19,7 +19,7 @@ function ContactME({}: Props) {
       </h3>
       <div className="flex flex-col space-y-10">
         <h4 className="text-4xl font-semibold text-center">
-          i have got just what u nedd.Lets Talk
+          i have got just what u need.Lets Talk
         </h4>
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
