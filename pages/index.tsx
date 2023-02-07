@@ -1,10 +1,10 @@
 import Head from 'next/head';
-
+import { HiArrowUpCircle } from 'react-icons/hi2';
 import { Inter } from '@next/font/google';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Image from 'next/image';
+
 import WorkExperience from '@/components/WorkExperience';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
@@ -53,13 +53,7 @@ export default function Home({ data }: Props) {
       <Link href="#hero">
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
-            <Image
-              className=" rounded-full filter grayscale hover:grayscale-0"
-              alt="arsham"
-              src="/WhatsApp Image 2022-09-09 at 10.24.57.jpeg"
-              width={32}
-              height={32}
-            />
+            <HiArrowUpCircle className=" w-12 h-12  rounded-full" />
           </div>
         </footer>
       </Link>
@@ -67,23 +61,6 @@ export default function Home({ data }: Props) {
   );
 }
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//   const res = await fetch('http://localhost:4000/data');
-//   const data = await res.json();
-
-//   return {
-//     props: { data },
-//   };
-// };
-// export const getStaticProps = async () => {
-//   const res = await fetch<Data[]>('http://localhost:4000/data');
-//   const data = await res.json();
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// };
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:4000/data');
   const data: Data[] = await res.json();
@@ -91,5 +68,6 @@ export const getStaticProps = async () => {
     props: {
       data,
     },
+    revalidate: 60 * 60,
   };
 };

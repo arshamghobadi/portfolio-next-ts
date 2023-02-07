@@ -59,6 +59,72 @@
       "id": 12,
       "name": "hygraph-cms",
       "progress": 90
+    },
+    {
+      "id": 13,
+      "name": "mongoDb",
+      "progress": 50
+    },
+    {
+      "id": 14,
+      "name": "vscode",
+      "progress": 90
+    }
+  ],
+  "data-exp": [
+    {
+      "id": 1,
+      "title": "financial unit- treasury Department",
+      "company": "NIOC",
+      "start": 2012,
+      "end": 2013,
+      "url": "https://en.nioc.ir",
+      "summry": {
+        "1": "filing of inancial douuments",
+        "2": "Issuing bank checks",
+        "3": "responsible for contractors bank guarantees"
+      }
+    },
+    {
+      "id": 2,
+      "title": "financial unit- treasury Department",
+      "company": "ndco",
+      "start": 2013,
+      "end": 2017,
+      "url": "https://www.ndco.ir",
+      "summry": {
+        "1": "commodity accounting expert",
+        "2": "Issuing bank checks",
+        "3": "responsible for contractors bank guarantees"
+      }
+    },
+    {
+      "id": 3,
+      "title": "general manger",
+      "company": "dr.shahbazi pharmecy",
+      "start": 2018,
+      "end": 2019,
+      "url": "https://darookhaneonline.com",
+      "summry": {
+        "1": "monitoring for site content",
+        "2": "seo",
+        "3": "monitoring for customer satisfaction"
+      }
+    },
+    {
+      "id": 4,
+      "title": "manger",
+      "company": "dr zohre zare pharmecy",
+      "start": 2019,
+      "end": 2020,
+      "url": "https://darubama.com",
+      "summry": {
+        "1": "monitoring for site content",
+        "2": "seo",
+        "3": "monitoring for customer satisfaction",
+        "4": "marketing",
+        "5": "everything related to this website was my responsibility"
+      }
     }
   ]
 }

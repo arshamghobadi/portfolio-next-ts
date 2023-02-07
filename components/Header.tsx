@@ -52,7 +52,7 @@ export default function Header({}: Props) {
         />
 
         <Link href="#contact">
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          <p className="uppercase  md:inline-flex text-sm text-gray-400">
             GET IN TOUCH
           </p>
         </Link>
