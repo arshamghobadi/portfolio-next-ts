@@ -13,7 +13,16 @@ import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+interface Data {
+  id: number;
+  name: string;
+  progress: number;
+}
+interface Props {
+  data: Data[];
+}
+
+export default function Home({ data }: Props) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
@@ -33,7 +42,7 @@ export default function Home() {
         <WorkExperience />
       </section>
       <section id="skills" className="snap-start">
-        <Skills />
+        <Skills data={data} />
       </section>
       <section id="projects" className="snap-start">
         <Projects />
@@ -57,3 +66,30 @@ export default function Home() {
     </div>
   );
 }
+
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const res = await fetch('http://localhost:4000/data');
+//   const data = await res.json();
+
+//   return {
+//     props: { data },
+//   };
+// };
+// export const getStaticProps = async () => {
+//   const res = await fetch<Data[]>('http://localhost:4000/data');
+//   const data = await res.json();
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:4000/data');
+  const data: Data[] = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+};

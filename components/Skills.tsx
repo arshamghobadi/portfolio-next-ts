@@ -1,9 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Skill from './Skill';
-type Props = {};
+// type Props = {};
+interface Data {
+  id: number;
+  name: string;
+  progress: number;
+}
+interface Props {
+  data: Data[];
+}
 
-function Skills({}: Props) {
+function Skills({ data }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,20 +25,11 @@ function Skills({}: Props) {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
         hover over a skill for currency proficiency
       </h3>
+
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {data.map((item) => (
+          <Skill key={item.id} data={item} />
+        ))}
       </div>
     </motion.div>
   );
