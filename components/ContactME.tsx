@@ -17,7 +17,7 @@ function ContactME({}: Props) {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-10 w-80 sm:w-2/4">
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <HiPhone className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
@@ -34,9 +34,10 @@ function ContactME({}: Props) {
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          // w-fit mx-auto add this class for class name
+          className="flex flex-col space-y-2 "
         >
-          <div className="flex space-x-2">
+          <div className="flex flex-col space-y-2 ">
             <input
               {...register('name')}
               placeholder="Name"
