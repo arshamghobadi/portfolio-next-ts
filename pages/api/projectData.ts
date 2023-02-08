@@ -7,7 +7,7 @@ interface projectsData {
 }
 
 export const fetchProjectsData = async () => {
-  const res = await fetch('http://localhost:4000/projectsData');
+  const res = await fetch(`${process.env.BASE_URL}/projectsData`);
   const projects: projectsData[] = await res.json();
   return projects;
 };

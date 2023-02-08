@@ -14,8 +14,6 @@ type Props = {
 };
 
 function Projects({ projects }: Props) {
-  console.log(projects);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,9 +40,9 @@ function Projects({ projects }: Props) {
               // viewport={{ once: true }}
               alt={project.title}
               src={`/image-project/${project.id}.jpg`}
-              className=" w-20 h-20 sm:w-2/6 sm:h-1/5 md:w-3/6 md:h-3/6 "
+              className=" w-24 h-24 sm:w-2/6 sm:h-1/5 md:w-3/6 md:h-3/6 "
             />
-            <div className="space-y-8 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-6 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl  text-center">{project.title}</h4>
               <div className=" flex flex-row  justify-evenly text-[#F7AB0A]">
                 <Link href={project.demo}>Demo</Link>

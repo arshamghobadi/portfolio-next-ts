@@ -27,11 +27,11 @@ export default function Header({}: Props) {
           fgColor="gray"
           url="https://www.linkedin.com/in/arsham-ghobadi-044b8aa1"
         />
-        <SocialIcon
+        {/* <SocialIcon
           bgColor="transparent"
           fgColor="gray"
           url="https://twitter.com/jaketrent"
-        />
+        /> */}
       </motion.div>
 
       <motion.div
@@ -52,7 +52,7 @@ export default function Header({}: Props) {
         />
 
         <Link href="#contact">
-          <p className="uppercase  md:inline-flex text-sm text-gray-400">
+          <p className="uppercase mx-3 md:inline-flex text-sm text-gray-400">
             GET IN TOUCH
           </p>
         </Link>

@@ -42,7 +42,7 @@ export default function ExperienceCard({ dataExp }: Props) {
           </li>
         ))}
       </ul>
-      <Link className=" text-[#F7AB0A]" href={dataExp.url}>
+      <Link className=" text-[#F7AB0A]" href={dataExp.url} target="_blank">
         Website
       </Link>
     </article>
