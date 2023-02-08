@@ -79,11 +79,11 @@
       "start": 2012,
       "end": 2013,
       "url": "https://en.nioc.ir",
-      "summry": {
-        "1": "filing of inancial douuments",
-        "2": "Issuing bank checks",
-        "3": "responsible for contractors bank guarantees"
-      }
+      "summry": [
+        "filing of inancial douuments",
+        "Issuing bank checks",
+        "responsible for contractors bank guarantees"
+      ]
     },
     {
       "id": 2,
@@ -92,11 +92,11 @@
       "start": 2013,
       "end": 2017,
       "url": "https://www.ndco.ir",
-      "summry": {
-        "1": "commodity accounting expert",
-        "2": "Issuing bank checks",
-        "3": "responsible for contractors bank guarantees"
-      }
+      "summry": [
+        "commodity accounting expert",
+        "Issuing bank checks",
+        "responsible for contractors bank guarantees"
+      ]
     },
     {
       "id": 3,
@@ -105,11 +105,11 @@
       "start": 2018,
       "end": 2019,
       "url": "https://darookhaneonline.com",
-      "summry": {
-        "1": "monitoring for site content",
-        "2": "seo",
-        "3": "monitoring for customer satisfaction"
-      }
+      "summry": [
+        "monitoring for website content",
+        "seo",
+        "monitoring for customer satisfaction"
+      ]
     },
     {
       "id": 4,
@@ -118,13 +118,50 @@
       "start": 2019,
       "end": 2020,
       "url": "https://darubama.com",
-      "summry": {
-        "1": "monitoring for site content",
-        "2": "seo",
-        "3": "monitoring for customer satisfaction",
-        "4": "marketing",
-        "5": "everything related to this website was my responsibility"
-      }
+      "summry": [
+        "monitoring for website content",
+        "seo",
+        "monitoring for customer satisfaction",
+        "marketing",
+        "everything related to this website was my responsibility"
+      ]
+    }
+  ],
+  "projectsData": [
+    {
+      "id": 1,
+      "title": "Nicki Shop",
+      "demo": "https://enchanting-platypus-acacab.netlify.app",
+      "SourceCode": "https://github.com/arshamghobadi",
+      "discription": "Introducing my first e-commerce website, a culmination of my year-long journey in programming. Built with modern technologies like React, Redux, and Bootstrap CSS, the website delivers a seamless shopping experience for customers. With a focus on functionality, the website offers a user-friendly interface and smooth navigation for a hassle-free shopping experience. From browsing products to making secure purchases, this website has it all."
+    },
+    {
+      "id": 2,
+      "title": "crypto-currency-project",
+      "demo": "https://lustrous-madeleine-5a79cd.netlify.app",
+      "SourceCode": "https://github.com/arshamghobadi/cryptocurrency-project",
+      "discription": "Introducing my second project, a comprehensive cryptocurrency tracker that showcases the latest rates, prices, market caps, and volumes of all major cryptocurrencies. With an emphasis on providing up-to-date information, the tracker is an essential tool for anyone interested in the cryptocurrency market. The detailed pages offer a deep dive into each cryptocurrency, displaying its price change over the past week. Whether you're an experienced trader or just starting out, this cryptocurrency tracker has everything you need to stay informed and make informed decisions"
+    },
+    {
+      "id": 3,
+      "title": "my first protfolio webpage",
+      "demo": "https://jolly-selkie-ced79b.netlify.app",
+      "SourceCode": "https://github.com/arshamghobadi/portfolioweb",
+      "discription": "Introducing my latest project, a sleek and modern portfolio website built using React, Material UI, GraphQL, and the headless CMS, Hygrah. The website features a clean and intuitive design, making it easy for visitors to navigate and explore the various projects and experiences that I have to offer. With GraphQL, I was able to seamlessly connect the frontend to the CMS and provide a smooth user experience. Whether you're a potential employer, collaborator, or just interested in my work, this website offers a comprehensive overview of my skills and achievements"
+    },
+    {
+      "id": 4,
+      "title": "darubama",
+      "demo": "https://enchanting-platypus-acacab.netlify.app",
+      "SourceCode": "https://github.com/arshamghobadi",
+      "discription": "After two successful years as General Manager at an online pharmacy, I took on a new challenge as Manager at another reputable online pharmaceutical company. In this role, I was responsible for all aspects of the website, from content creation to customer service and website management. My strong leadership skills and passion for the industry allowed me to drive the pharmacy to new heights of success, ensuring a seamless customer experience and maintaining high levels of patient satisfaction. With two years of experience as a Manager in the online pharmacy space, I am confident in my ability to lead and drive results in a fast-paced and ever-evolving industry."
+    },
+    {
+      "id": 5,
+      "title": "darookhaneonline",
+      "demo": "https://darookhaneonline.com",
+      "SourceCode": "https://github.com/arshamghobadi",
+      "discription": "With two years of experience in the online pharmacy industry, I am proud to have recently been promoted to the role of General Manager. In this role, I oversee all operations of the pharmacy, from website content creation to customer service and everything in between. My strong communication skills and ability to lead a team have allowed me to successfully navigate the complex and rapidly evolving world of online pharmaceuticals. I am committed to providing the highest level of customer satisfaction, and am always striving to improve our processes and services to better serve our patients."
     }
   ]
 }

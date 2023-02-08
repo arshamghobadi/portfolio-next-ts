@@ -20,9 +20,9 @@ export default function About({}: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         src="/WhatsApp Image 2022-09-09 at 10.24.57.jpeg"
-        className=" mt-14 md:mb-0 md:mt-14 flex-shrink-0 w-48 h-48 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[400px]  xl:mt-20"
+        className=" mt-14 md:mb-0 md:mt-14 flex-shrink-0 w-32 h-32 sm:w-48 sm:h-48 rounded-full  object-cover md:rounded-lg md:w-64 md:h-80 xl:w-[500px] xl:h-[400px]  xl:mt-20"
       />
-      <div className="space-y-10 px-0 md:px-10 ">
+      <div className="space-y-8 px-0 md:px-10 ">
         <h4 className="text-3xl fort-semibold">
           Here is a{' '}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{' '}

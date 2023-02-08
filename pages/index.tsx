@@ -10,19 +10,41 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import ContactME from '@/components/ContactME';
 import Link from 'next/link';
+import { fetchData } from './api/data';
+import { GetStaticProps } from 'next';
+
+import { fetchDataExp } from './api/getExp';
+import { fetchProjectsData } from './api/projectData';
 
 const inter = Inter({ subsets: ['latin'] });
-
+interface projectsData {
+  id: string;
+  title: string;
+  demo: string;
+  SourceCode: string;
+  discription: string;
+}
+interface WorkExperience {
+  id: number;
+  title: string;
+  company: string;
+  start: number;
+  end: number;
+  url: string;
+  summry: string[];
+}
 interface Data {
   id: number;
   name: string;
   progress: number;
 }
-interface Props {
+type Props = {
   data: Data[];
-}
+  dataExp: WorkExperience[];
+  projects: projectsData[];
+};
 
-export default function Home({ data }: Props) {
+export default function Home({ data, dataExp, projects }: Props) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
@@ -39,13 +61,13 @@ export default function Home({ data }: Props) {
         <About />
       </section>
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience dataExp={dataExp} />
       </section>
       <section id="skills" className="snap-start">
         <Skills data={data} />
       </section>
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
       <section id="contact" className="snap-start">
         <ContactME />
@@ -61,12 +83,16 @@ export default function Home({ data }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:4000/data');
-  const data: Data[] = await res.json();
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const data: Data[] = await fetchData();
+  const dataExp: WorkExperience[] = await fetchDataExp();
+  const projects: projectsData[] = await fetchProjectsData();
+
   return {
     props: {
       data,
+      dataExp,
+      projects,
     },
     revalidate: 60 * 60,
   };

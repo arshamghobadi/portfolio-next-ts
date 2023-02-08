@@ -5,16 +5,11 @@ interface WorkExperience {
   start: number;
   end: number;
   url: string;
-  summry: { [key: string]: string };
+  summry: string[];
 }
 
-export const getStaticProps = async () => {
+export const fetchDataExp = async () => {
   const res = await fetch('http://localhost:4000/data-exp');
-  const data: WorkExperience[] = await res.json();
-  return {
-    props: {
-      data,
-    },
-    revalidate: 60 * 60,
-  };
+  const dataExp: WorkExperience[] = await res.json();
+  return dataExp;
 };

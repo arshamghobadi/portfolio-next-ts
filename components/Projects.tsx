@@ -1,10 +1,21 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-type Props = {};
+import Link from 'next/link';
+interface projects {
+  id: string;
+  title: string;
+  demo: string;
+  SourceCode: string;
+  discription: string;
+}
+type Props = {
+  projects: projects[];
+};
 
-function Projects({}: Props) {
-  const Projects = [1, 2, 3, 4, 5, 6];
+function Projects({ projects }: Props) {
+  console.log(projects);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,9 +27,9 @@ function Projects({}: Props) {
         Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20  scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {Projects.map((project, i) => (
+        {projects.map((project) => (
           <div
-            key={project}
+            key={project.id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
@@ -28,19 +39,19 @@ function Projects({}: Props) {
               }}
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              alt="arsham"
-              src="/WhatsApp Image 2022-09-09 at 10.24.57.jpeg"
+              // viewport={{ once: true }}
+              alt={project.title}
+              src={`/image-project/${project.id}.jpg`}
+              className=" w-20 h-20 sm:w-2/6 sm:h-1/5 md:w-3/6 md:h-3/6 "
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                case study {i + 1} of {Projects.length}: Ups clone
-              </h4>
-              <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                neque asperiores totam facere quaerat illum mollitia praesentium
-                quod eius! Ullam consectetur, vero numquam voluptatibus maxime
-                enim suscipit sed fuga voluptatem?
+            <div className="space-y-8 px-0 md:px-10 max-w-6xl">
+              <h4 className="text-2xl  text-center">{project.title}</h4>
+              <div className=" flex flex-row  justify-evenly text-[#F7AB0A]">
+                <Link href={project.demo}>Demo</Link>
+                <Link href={project.SourceCode}>SourceCode</Link>
+              </div>
+              <p className=" text-sm lg:text-lg text-center md:text-left">
+                {project.discription}
               </p>
             </div>
           </div>
