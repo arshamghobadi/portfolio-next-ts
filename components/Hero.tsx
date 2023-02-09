@@ -15,6 +15,7 @@ export default function Hero({}: Props) {
     <div className="h-screen flex flex-col text-center space-y-8 items-center justify-center overflow-hidden">
       <BackgroundCircles />
       <Image
+        priority
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
         src="/WhatsApp Image 2022-09-09 at 10.24.57.jpeg"
         alt="Picture of the arsham"
